@@ -117,23 +117,80 @@ nav .menu a{
         font-size: 24px;
     }
 
-    nav{
-        background-color: green;
-    }
-
     .menu{
         position: absolute;
-        background-color: red;
+        /* background-color: red; */
         width: 100%;
         top: 100%;
         z-index: 99;
-        /* display: none; */
+        display: none;
     }
 
     .menu a{
-        background-color: orange;
+        /* background-color: orange; */
         padding: 32px 0;
         font-size: 18px;
         display: block;
     }
+
+    .show{
+        display: block;
+    }
+}
+
+
+/* Hero Section */
+.hero{
+    /* background-color: red; */
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    position: relative;
+}
+
+.hero .left{
+    background-image: url(../img/hero.jpg);
+    background-size: cover;
+    /* background-color: green; */
+    height: 60vh;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.hero .right{
+    background-color: rgb(84, 236, 203);
+}
+
+.hero .content-box{
+    /* border: 2px solid black; */
+    position: absolute;
+    background-color: #fffffc;
+    padding: 20px;
+    width: 35%;
+    top: 50%;
+    left: 65%;
+    transform: translate(-40%,-50%);
+    opacity: 0.8;
+}
+
+@media screen and (max-width: 768px){
+    .hero{
+        grid-template-columns: 1fr;
+    }
+
+    .hero .content-box{
+        top: 50%;
+        left: 50%;
+        width: 80%;
+        transform: translate(-50%,-50%);
+    }
+}
+
+/* Blog */
+main{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.blog .thumbnail{
+    object-fit: contain;
 }
