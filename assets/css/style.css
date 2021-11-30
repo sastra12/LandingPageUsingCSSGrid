@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;700&family=Playfair+Display:wght@800&display=swap');
+
+:root{
+    --primary-color: #202020;
+    --secondary-color: #f4f7fc;
+    --grey: #a6a6a6;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+*,
+::after,
+::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Mulish', sans-serif;
+}
+
+h1,h2,h3{
+    font-family: 'Playfair Display', serif;
+    font-weight: 800;
+    color: var(--primary-color);
+    margin: 1.6rem 0;
+}
+
+p{
+    font-weight: 400;
+    margin: 1.6rem 0;
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    line-height: 1.5;
+}
+
+h1{
+    font-size: 4rem;
+}
+
+@media screen and (max-width: 768px){
+    h1{
+        font-size: 3rem;
+    }
+}
+
+h2{
+    font-size: 3rem;
+    letter-spacing: 1.5px;
+}
+
+h3{
+    font-size: 2.5rem;
+    letter-spacing: 1.5px;
+}
+
+h4{
+    font-size: 1.6rem;
+}
+
+span{
+    color: var(--grey);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+a{
+    text-decoration: none;  
+    margin: 1.6rem 0; 
+    color: var(--grey);
+    font-size: 1.6rem;
+    border-bottom: 2px dotted var(--primary-color);
+}
+
+.site-container{
+    width: 80%;
+    margin: 0 auto;
+    /* background-color: red; */
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+hr{
+    margin: 16px 0;
+}
+
+/* Navigation */
+nav{
+    position: relative;
+    display: flex;
+    /* background-color: red; */
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .menu a{
+    border-bottom: none;
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-left: 24px;
+}
+
+.mobile-menu{
+    display: none;
+}
+
+@media screen and (max-width: 768px){
+    .mobile-menu{
+        display: block;
+        font-size: 24px;
+    }
+
+    nav{
+        background-color: green;
+    }
+
+    .menu{
+        position: absolute;
+        background-color: red;
+        width: 100%;
+        top: 100%;
+        z-index: 99;
+        /* display: none; */
+    }
+
+    .menu a{
+        background-color: orange;
+        padding: 32px 0;
+        font-size: 18px;
+        display: block;
+    }
+}
